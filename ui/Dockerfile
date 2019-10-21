@@ -7,11 +7,11 @@ ENV APP_HOME /app
 RUN mkdir $APP_HOME
 
 WORKDIR $APP_HOME
-ADD ./src/ui/Gemfile* $APP_HOME/
+ADD ./ui/Gemfile* $APP_HOME/
 RUN bundle install
-ADD ./src/ui $APP_HOME/
+ADD ./ui $APP_HOME/
 # RUN mkdir ${APP_HOME}/views
-# ADD ./src/ui/views/* ${APP_HOME}/views/
+# ADD ./ui/views/* ${APP_HOME}/views/
 
 ENV POST_SERVICE_HOST post
 ENV POST_SERVICE_PORT 5000

@@ -1,7 +1,7 @@
 FROM python:3.6.8-alpine
 
 WORKDIR /app
-ADD ./src/post-py/* /app/
+ADD ./post-py/* /app/
 
 RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-dev py-pip build-base gcc musl-dev
 RUN pip install -r /app/requirements.txt

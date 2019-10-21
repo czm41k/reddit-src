@@ -6,9 +6,9 @@ ENV APP_HOME /app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-ADD ./src/comment/Gemfile* $APP_HOME/
+ADD ./comment/Gemfile* $APP_HOME/
 RUN bundle install
-COPY ./src/comment/* $APP_HOME/
+COPY ./comment/* $APP_HOME/
 
 RUN rm -rf /var/cache/apk/*
 
